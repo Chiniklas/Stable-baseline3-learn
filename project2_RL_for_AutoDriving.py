@@ -37,6 +37,7 @@ env = DummyVecEnv([lambda:env])
 log_path = os.path.join('Training','Logs')
 model = PPO('CnnPolicy',env,verbose=1,tensorboard_log=log_path,device='cuda')
 model.learn(total_timesteps=200000)
+
 # 4.Save Model
 PPO_path = os.path.join('Training','Saved Models','PPO_RacingCar_Model')
 model.save(PPO_path)

@@ -54,7 +54,7 @@ env = VecFrameStack(env,n_stack=4)
 print(env.reset())
 log_path = os.path.join('Training','Logs')
 model = A2C('CnnPolicy',env,verbose=1,tensorboard_log=log_path,device='cuda')
-model.learn(total_timesteps=100000)
+model.learn(total_timesteps=250000)
 # 4.save and reload model
 a2c_path = os.path.join('Training','Saved Models','A2C_Breakout_Model')
 model.save(a2c_path)
