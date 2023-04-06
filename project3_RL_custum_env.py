@@ -2,6 +2,7 @@
 import gym
 from gym import Env
 from gym.spaces import Discrete,Box,Dict,Tuple,MultiBinary,MultiDiscrete
+from gym.utils.env_checker import check_env
 
 # import helpers
 import numpy as np
@@ -65,6 +66,8 @@ env = ShowerEnv()
 print(env.observation_space.sample())
 print(env.action_space.sample())
 print(env.reset)
+# print(check_env(env))
+
 # 4.Test Environment
 episodes = 5
 for episode in range(1,episodes+1):
